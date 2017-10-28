@@ -15,7 +15,7 @@ public class Clouds
         this.all = all;
     }
 
-    private int all;
+    private int all; // tỉ lệ có mây
 
 
 }

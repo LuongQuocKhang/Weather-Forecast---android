@@ -16,6 +16,10 @@ public class OpenWeatherJSON
 
     private Coord coord;
     private Sys sys;
+    private Main main;
+    private  Wind wind;
+    private Clouds clouds;
+    private Weatheritem weather;
 
     public String getBase() {
         return base;
@@ -97,16 +101,11 @@ public class OpenWeatherJSON
         this.clouds = clouds;
     }
 
-    public List<Weatheritem> getWeather() {
+    public Weatheritem getWeather() {
         return weather;
     }
 
-    public void setWeather(List<Weatheritem> weather) {
+    public void setWeather(Weatheritem weather) {
         this.weather = weather;
     }
-
-    private Main main;
-    private  Wind wind;
-    private Clouds clouds;
-    private List<Weatheritem> weather;
 }

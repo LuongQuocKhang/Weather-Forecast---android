@@ -11,6 +11,22 @@ public class Sys
     private double sunrise;
     private double sunset;
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public void setSunrise(double sunrise) {
+        this.sunrise = sunrise;
+    }
+
+    public void setSunset(double sunset) {
+        this.sunset = sunset;
+    }
+
     public String getMessage() {
         return message;
     }
