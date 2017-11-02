@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:isScrollContainer="false"
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingTop="10dp">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="273dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Your location"
+        android:textColor="#EEE"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Temperature"
+        android:textColor="#EEE"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textviewDescription"
+        android:layout_width="149dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:text="Description"
+        android:gravity="center"
+        android:textColor="#EEE"
+        app:layout_constraintStart_toEndOf="@+id/textViewTemp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />
+
+    <TextView
+        android:id="@+id/textViewTemp"
+        android:layout_width="98dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="27 C"
+        android:textColor="#EEE"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="346dp"
+        android:layout_height="79dp"
+        android:src="@drawable/clouds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="88dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:gravity="center"
+        android:text="Max temp"
+        android:textColor="#222"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textViewMaxtemp"
+        android:layout_width="140dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="30C"
+        android:textColor="#000"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="88dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:gravity="center"
+        android:text="Max temp"
+        android:textColor="#222"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textViewMinTemp"
+        android:layout_width="140dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="30C"
+        android:textColor="#000"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMaxtemp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="88dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:gravity="center"
+        android:text="Wind"
+        android:textColor="#222"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textViewWind"
+        android:layout_width="140dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="Slow"
+        android:textColor="#000"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMinTemp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="88dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:gravity="center"
+        android:text="Pressure"
+        android:textColor="#222"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textViewPressure"
+        android:layout_width="140dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="Pressure"
+        android:textColor="#222"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWind" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="88dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:gravity="center"
+        android:text="Humidity"
+        android:textColor="#222"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textViewHumidity"
+        android:layout_width="140dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="Humidity"
+        android:textColor="#222"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPressure" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="95dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:gravity="center"
+        android:text="Cloudiness"
+        android:textColor="#222"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textViewClouds"
+        android:layout_width="140dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="Clouds"
+        android:textColor="#000"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHumidity" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="88dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:gravity="center"
+        android:text="Sunrise"
+        android:textColor="#222"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textViewSunrise"
+        android:layout_width="140dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="Slow"
+        android:textColor="#000"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClouds" />
+
+</android.support.constraint.ConstraintLayout>

@@ -44,9 +44,9 @@ public class OpenWeatherMapAPI
         // lấy thông tin Main
         Main main = new Main();
         JSONObject mainObject = getObject("main",JObject);
-        main.setTemp(getFloat("temp",mainObject));
-        main.setTemp_max(getFloat("temp_max",mainObject));
-        main.setTemp_min(getFloat("temp_min",mainObject));
+        main.setTemp((int)(getFloat("temp",mainObject) - 273.15));
+        main.setTemp_max((int)(getFloat("temp_max",mainObject) - 273.15));
+        main.setTemp_min((int)(getFloat("temp_min",mainObject) - 273.15));
         main.setPressure(getInt("pressure",mainObject));
         //main.setSea_level(getFloat("sea_level",mainObject));
         main.setHumidity(getFloat("humidity",mainObject));
@@ -62,7 +62,7 @@ public class OpenWeatherMapAPI
         // lấy thông tin wind
         JSONObject windObject = getObject("wind",JObject);
         Wind wind = new Wind();
-        wind.setDegree(getInt("deg",windObject));
+        //wind.setDegree(getInt("deg",windObject));
         wind.setSpeed(getInt("speed",windObject));
         weather.setWind(wind);
 
