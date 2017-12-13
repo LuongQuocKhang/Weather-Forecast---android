@@ -1,5 +1,6 @@
 package com.example.luongquockhang.weatherforecast.Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,7 +20,16 @@ public class OpenWeatherJSON
     private Main main;
     private  Wind wind;
     private Clouds clouds;
-    private Weatheritem weather;
+
+    public void setListWeather(List<Weatheritem> weather) {
+        this.weather = weather;
+    }
+
+    public List<Weatheritem> getListWeather() {
+        return weather;
+    }
+
+    private List<Weatheritem> weather = new ArrayList<Weatheritem>();
 
     public String getBase() {
         return base;
@@ -99,13 +109,5 @@ public class OpenWeatherJSON
 
     public void setClouds(Clouds clouds) {
         this.clouds = clouds;
-    }
-
-    public Weatheritem getWeather() {
-        return weather;
-    }
-
-    public void setWeather(Weatheritem weather) {
-        this.weather = weather;
     }
 }
