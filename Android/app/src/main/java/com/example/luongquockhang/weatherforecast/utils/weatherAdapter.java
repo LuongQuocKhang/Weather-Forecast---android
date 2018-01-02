@@ -11,8 +11,8 @@ import android.widget.TextView;
 import com.example.luongquockhang.weatherforecast.Model.DailyWeather;
 import com.example.luongquockhang.weatherforecast.R;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
@@ -64,17 +64,15 @@ public class weatherAdapter extends BaseAdapter {
         DailyWeather item = weatherlist.get(position);
         weatherIcon.setImageBitmap(item.getWeatherIcon());
         Desciption.setText(item.getDesciption());
-        MaxTemp.setText(String.valueOf((int)item.getMaxTemp()));
-        MinTemp.setText(String.valueOf((int)item.getMinTemp()));
+        MaxTemp.setText(String.valueOf((int)item.getMaxTemp()) + "°C");
+        MinTemp.setText(String.valueOf((int)item.getMinTemp()) + "°C");
         Humidity.setText(String.valueOf((int)item.getHumidity()) + "%");
-        Temp.setText(String.valueOf((int)item.getTemp()));
+        Temp.setText(String.valueOf((int)item.getTemp()) + "°C");
 
-        Calendar calendar = new GregorianCalendar();
-        calendar.setTimeInMillis(item.getDatetime());
-
-        datetime.setText(calendar.get(Calendar.DAY_OF_MONTH) + "/"
-                        + calendar.get(Calendar.MONTH) + "/"
-                        + calendar.get(Calendar.YEAR));
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(item.getDatetime()*1000);
+        SimpleDateFormat sdf = new SimpleDateFormat("DD - MM - YYYY");
+        datetime.setText(sdf.format(calendar.getTime()));
         
         return convertView;
     }
